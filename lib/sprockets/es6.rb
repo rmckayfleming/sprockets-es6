@@ -40,6 +40,6 @@ module Sprockets
 
   append_path Babel::Transpiler.source_path
   register_mime_type 'text/ecmascript-6', extensions: ['.es6'], charset: :unicode
-  register_transformer 'text/ecmascript-6', 'application/javascript', Sprockets::ES6.new('modules' => 'common')
+  register_transformer 'text/ecmascript-6', 'application/javascript', Sprockets::ES6.new('modules' => 'amd')
   register_preprocessor 'text/ecmascript-6', DirectiveProcessor
 end
